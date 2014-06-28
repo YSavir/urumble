@@ -8,5 +8,7 @@ class Student < ActiveRecord::Base
   belongs_to :school
   has_many :reviews
   has_many :photos
+  has_many :student_diets
+  has_many :diets, through: :student_diets
 
 end
