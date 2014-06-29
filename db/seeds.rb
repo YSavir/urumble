@@ -38,7 +38,7 @@ sean_blanton_review = sean.reviews.create(:comment => "Horrible chicken, but pro
   Photo.create(:dining_hall_id => halls.sample.id, :student_id => students.sample.id, :url => "http://lorempixel.com/200/200/food")
 end
 # create last so it gets listed as newest
-potato_photo = yaniv_blanton_review.photos.create(:student_id => yaniv.id, :dining_hall_id => blanton.id, :url => "/images/curly_fries.jpg")
+potato_photo = Photo.create(:review_id => yaniv_blanton_review.id, :student_id => yaniv.id, :dining_hall_id => blanton.id, :url => "/images/curly_fries.jpg")
 
 #Tags
 taters = Tag.create(:name => '#sayNoToPoison', :taggable_id => potato_photo.id, :taggable_type => potato_photo.class.name, :student_id => yaniv.id, :dining_hall_id => potato_photo.dining_hall_id)
