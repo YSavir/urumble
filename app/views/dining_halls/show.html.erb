@@ -1,1 +1,20 @@
 <%= @dining_hall.name %>
+<%= @dining_hall.average_rating %>
+
+<%= form_for([@dining_hall, @review]) do |f| %>
+  Comment:<br>
+  <%= f.text_area :comment %><br>
+  Rating: <input id="rating" name="review[rating]" min="1" max="5" type="number" /><br>
+  <%= f.submit %>
+<% end %>
+
+<% @recent_reviews.each do |review| %>
+  <div>
+    <% if review.photo %>
+      <%= image_tag(review.photo.url)%><br>
+    <% end %>
+    "<%= review.comment %>"<br>
+    Rating: <%= review.rating %><br>
+    <%= link_to(review.student.name, student_path(review.student)) %>
+  </div>
+<% end %>
