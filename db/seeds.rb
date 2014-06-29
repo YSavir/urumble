@@ -48,6 +48,8 @@ chicken_plate = Tag.create(:name => '#brotein', :taggable_id => sean_blanton_rev
 # Diets
 vegan = Diet.create(:name => "Vegan")
 kosher = Diet.create(:name => "Kosher")
+paleo = Diet.create(:name => "Paleo")
+vegetarian = Diet.create(:name => "Vegetarian")
 
 # StudentDiets
 StudentDiet.create(:student_id => yaniv.id, :diet_id => kosher.id)
