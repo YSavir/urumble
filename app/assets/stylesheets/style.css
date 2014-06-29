@@ -35,6 +35,31 @@ header {
   z-index:10000;
   width:100%;
 }
+.profile {
+  text-align:center;
+}
+
+.profile h3 {
+    line-height:1.5em;
+
+}
+.diet-choice {
+  border-bottom: 3px dotted #4796ff;
+  color: #4796ff;
+}
+.diet-choice:hover {
+  border-bottom: 3px dotted #77b1fd;
+  color: #77b1fd;
+}
+
+.allergy {
+  border-bottom: 3px dotted #6b9e3f;
+  color: #6b9e3f;
+}
+.allergy:hover {
+  border-bottom: 3px dotted #99c770;
+  color: #99c770;
+}
 
 form {
   text-align:center;
@@ -58,14 +83,14 @@ form {
    content: "\2605";
    position: absolute;
 }
-#photo {
+.add-buttons #photo li {
   background-color:#f6b600;
 }
-#review {
-  background:;
+.add-buttons #review li {
+  background:#6b9e3f;
 }
-#checkin {
-  background:;
+.add-buttons #checkin li {
+  background:#4796ff;
 }
 
 li#add {
@@ -89,6 +114,7 @@ li#add {
   background: #000000;
   padding:10px;
   border-radius:5px;
+  margin: 0 10px;
 }
 .add-buttons ul {
   list-style-type:none;
