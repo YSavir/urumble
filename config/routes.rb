@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :administrators
-  devise_for :students
+  devise_for :students, :controllers => {:registrations => "students/registrations"}
 
   root to: 'photos#index'
 
