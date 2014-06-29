@@ -10,7 +10,13 @@
   <%= f.text_field :name %></div>
 
   <div><%= f.label :school %><br>
-  <%= f.select("diet", Diet.all) %></div>
+  <%= select_tag(:school_id, options_for_select(School.all.collect {|a| [a.name, a.id]})) %></div>
+
+  <div><%= f.label :diet %><br>
+  <% Diet.all.order(name: :asc).each do |diet| %>
+    <%= check_box_tag("diets[" + diet.name + "]") %>
+    <%= label_tag(diet.name.to_sym, diet.name) %><br>
+  <% end %></div>
   
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
