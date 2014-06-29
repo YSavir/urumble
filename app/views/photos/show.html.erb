@@ -1,0 +1,14 @@
+<!-- display photo -->
+<%= image_tag(@photo.url) %>
+<!-- if attached to a review, show the comment and link to full review -->
+<% if @photo.review %>
+  <%= @photo.review.comment %>
+  <%= link_to("(Full Review)", review_path(@photo.review))%>
+<% end %>
+<!-- link to student -->
+<%= link_to(@photo.student.name, student_path(@photo.student)) %>
+<!-- link to dining hall -->
+<%= link_to(@photo.dining_hall.name, school_dining_hall_path(@photo.dining_hall.school, @photo.dining_hall)) %>
+<% @photo.tags.each do |tag| %>
+  <%= link_to(tag.name, tag_path(tag)) %>
+<% end %>

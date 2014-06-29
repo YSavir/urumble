@@ -5,4 +5,8 @@ class PhotosController < ApplicationController
     @student_school_photos = Photo.student_homepage_photos(current_student.school)
   end
 
+  def show
+    @photo = Photo.find(params[:id])
+  end
+
 end
