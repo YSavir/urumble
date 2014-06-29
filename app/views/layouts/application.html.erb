@@ -33,7 +33,9 @@
     <a href="/"><li class="border-right" > <i class="fa fa-2x fa-lightbulb-o"></i></li></a>
     <a  href="/school"><li class="border-right"> <i class="fa fa-2x fa-map-marker"></i></li></a>
     <li id="add" > <i class="fa fa-2x fa-plus"></i></li>
-    <a  href="/students/<%= current_student.id %>"><li class="border-left"> <i class="fa fa-2x fa-user"></i></li></a>
+    <% if current_student %>
+    <a  href="/students/<%= current_student.id %>"><% end %><li class="border-left"> <i class="fa fa-2x fa-user"></i></li><% if current_student %></a><% end %>
+
     <a  href=""><li class="border-left" > <i class="fa fa-2x fa-heart-o"></i></li></a>
 
   </ul>
