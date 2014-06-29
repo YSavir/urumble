@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready( function() {
   console.log('ready');
 $('.overlay').hide();
 $('.add-buttons').hide();

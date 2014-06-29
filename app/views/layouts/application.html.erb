@@ -22,7 +22,7 @@
 <div class="add-buttons">
   <ul>
     <a id="photo" href="/"><li>+PHOTO<br><i class="fa fa-2x fa-camera"></i></li></a>
-    <a id="review" href="/dining_halls/1/reviews/new"><li>+REVIEW<br><i class="fa fa-2x fa-star"></i></li></a>
+    <a id="review" href="/dining_halls/<%= DiningHall.first.id %>/reviews/new"><li>+REVIEW<br><i class="fa fa-2x fa-star"></i></li></a>
     <a id="checkin" ><li>+CHECK-IN<br><i class="fa fa-2x fa-check-square"></i></li></a>
   </ul>
 
@@ -33,7 +33,7 @@
     <a href="/"><li class="border-right" > <i class="fa fa-2x fa-lightbulb-o"></i></li></a>
     <a  href="/school"><li class="border-right"> <i class="fa fa-2x fa-map-marker"></i></li></a>
     <li id="add" > <i class="fa fa-2x fa-plus"></i></li>
-    <a  href="/students/1"><li class="border-left"> <i class="fa fa-2x fa-user"></i></li></a>
+    <a  href="/students/<%= current_student.id %>"><li class="border-left"> <i class="fa fa-2x fa-user"></i></li></a>
     <a  href=""><li class="border-left" > <i class="fa fa-2x fa-heart-o"></i></li></a>
 
   </ul>
