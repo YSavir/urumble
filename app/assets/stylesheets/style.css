@@ -1,3 +1,11 @@
+body {
+  font-family: 'museo-sans-rounded';
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'museo-sans-rounded';
+  font-weight:900;
+}
+
 .full-width {
   margin:-90px;
   position:relative;
@@ -43,7 +51,7 @@ header {
   background:;
 }
 
-#add li {
+li#add {
   box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.25);
   z-index:100;
   border-radius:5px;
@@ -51,8 +59,6 @@ header {
 #add .fa {
   color: #ff7500;
 }
-
-
 .add-buttons {
   display:none;
   position:fixed;
@@ -91,8 +97,8 @@ header {
   position:fixed;
   bottom:-10px;
   width:100%;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
   text-align:center;
+
 }
 
 
@@ -102,6 +108,7 @@ header {
   width:100%;
   margin:0px;
   padding:0px;
+  box-shadow: 5px -9px 5px rgba(0,0,0,0.25);
 }
 
 .border-right {

@@ -1,8 +1,17 @@
 <%= form_for([@dining_hall, @review]) do |f| %>
 <h2> <%= @dining_hall.name %></h2>
+<div class="form-group">
+    <select><option>Stir-Fry Station</option></select>
+</div>
+<div class="form-group">
 <div class="stars"> &#10025;&#10025;&#10025;&#10025;&#10025;</div>
+</div>
+<div class="form-group">
   Comment:<br>
-  <%= f.text_area :comment %><br>
+  <%= f.text_area :comment, placeholder: 'add your #twocents...' %><br>
+</div>
+
   <!-- Rating: <input id="rating" name="review[rating]" min="1" max="5" type="number" /><br> -->
-  <%= f.submit %>
+  <%= f.submit :class => 'btn btn-default' %>
+  <div>
 <% end %>
