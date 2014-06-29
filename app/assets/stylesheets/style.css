@@ -4,6 +4,13 @@
   height: 100%;
 }
 
+
+.photo img {
+  width:30%;
+  float:left;
+  margin:1%;
+}
+
 .container {
   margin-top:75px;
 }
@@ -21,11 +28,35 @@ header {
   width:100%;
 }
 
+.stars {
+  font-size:30px;
+}
+
+
+#photo {
+  background-color:#f6b600;
+}
+#review {
+  background:;
+}
+#checkin {
+  background:;
+}
+
+#add li {
+  box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.25);
+  z-index:100;
+  border-radius:5px;
+}
+#add .fa {
+  color: #ff7500;
+}
+
+
 .add-buttons {
   display:none;
   position:fixed;
   bottom:100px;
-  display:block;
   text-align:center;
   width:100%;
   z-index: 20000;
@@ -84,9 +115,10 @@ header {
 .bottom-nav li {
     display:inline-block;
     background:#ffffff;
-    top:-10px;
+    top:-5px;
     position:relative;
     width:15%;
+    text-align:center;
 }
 
 .bottom-nav .fa {
@@ -94,7 +126,7 @@ header {
 }
 
 .bottom-nav .fa-plus {
-  padding:20px;
+  padding:15px;
 }
 
 .bottom-nav a {

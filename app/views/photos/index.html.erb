@@ -1,3 +1,3 @@
 <% @student_school_photos.each do |photo| %>
-  <%= link_to( image_tag(photo.url, :border => 0), photo_path(photo) ) %>
+  <div class="photo"><%= link_to( image_tag(photo.url, :border => 0), photo_path(photo) ) %></div>
 <% end %>
