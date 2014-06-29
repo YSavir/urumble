@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
-group :test, :production do
+group :test, :development do
   gem 'pry-rails'
 end
 

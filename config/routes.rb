@@ -4,12 +4,14 @@ Rails.application.routes.draw do
 
   root to: 'photos#index'
 
-  resources :photos, :only => [:index, :show]
   resources :students, :only => [:show]
-  resources :schools do
-    resources :dining_halls
+  resources :schools, :only [:show]
+  resources :dining_halls do
+    resources :reviews, :only => [:show, :new, :create]
   end
+  resources :photos, :only => [:index, :show]
   resources :tags, :only => [:show]
-  resources :reviews, :only => [:show, :new, :create]
+
+
 
 end
