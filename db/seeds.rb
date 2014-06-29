@@ -11,6 +11,7 @@ StudentDiet.destroy_all
 
 # schools
 montclair = School.create(:name => "Montclair", :abbreviation => "MSU")
+montclair = School.create(:name => "Northwestern", :abbreviation => "NU")
 
 # students
 yaniv = montclair.students.create(:name => "Yaniv", :email => "yaniv@example.com", :password => "password123")

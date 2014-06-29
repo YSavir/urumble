@@ -5,17 +5,40 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
 <header>
-  <h1>RUMBLE</h1>
-</header>
-<%= yield %>
-<div class="bottom-navigation">
-  <ul>
-    <li></li>
-  </ul>
+  <div class="container">
+<%= image_tag "logo.png", class: 'logo' %>
 </div>
+</header>
+<div class="overlay"></div>
+<div class="container">
+
+<%= yield %>
+</div>
+<div class="add-buttons">
+  <ul>
+    <a id="photo" href="/"><li> <i class="fa fa-2x fa-camera"></i></li></a>
+    <a id="review" href="/dining_halls/1/reviews/new"><li> <i class="fa fa-2x fa-star"></i></li></a>
+    <a id="checkin" ><li><i class="fa fa-2x fa-check-square"></i></li></a>
+  </ul>
+
+</div>
+
+<div class="bottom-nav">
+  <ul>
+    <a href="/"><li class="border-right" > <i class="fa fa-2x fa-lightbulb-o"></i></li></a>
+    <a  href="/school"><li class="border-right"> <i class="fa fa-2x fa-map-marker"></i></li></a>
+    <a id="add" href=""><li> <i class="fa fa-2x fa-plus"></i></li></a>
+    <a  href=""><li class="border-left"> <i class="fa fa-2x fa-user"></i></li></a>
+    <a  href=""><li class="border-left" > <i class="fa fa-2x fa-heart-o"></i></li></a>
+
+  </ul>
+
+</div>
+
 
 </body>
 </html>

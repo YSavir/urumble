@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'photos#index'
 
+  get '/school', to: 'schools#example'
+
   resources :students, :only => [:show]
   resources :schools, :only => [:show]
   resources :dining_halls do
