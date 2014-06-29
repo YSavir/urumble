@@ -36,11 +36,28 @@ header {
   width:100%;
 }
 
-.stars {
-  font-size:30px;
+form {
+  text-align:center;
 }
 
-
+.stars {
+  font-size:30px;
+  text-align:center;
+}
+.stars {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.stars > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.stars > span:hover:before,
+.stars > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
 #photo {
   background-color:#f6b600;
 }
