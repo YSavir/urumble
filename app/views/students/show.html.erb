@@ -1,4 +1,5 @@
-<div class="profile"><h3>Hi <%= @student.name %>!</h3>
+<div class="profile"><h3>Hi <%= @student.name %>!</h3><a href="<%= edit_student_registration_path(@student) %>"><i class="fa fa-2x fa-pencil"></i></a>
 
-<h3>You're currently signed up as a <span class="diet-choice">vegetarian</span> with an allergy to <span class="allergy">peanuts</span>.</h3>
+<h3>You're currently signed up as a <span class="diet-choice">kosher</span> <span class="diet-choice">vegetarian</span> with an allergy to <span class="allergy">peanuts</span>.</h3>
 </div>
+

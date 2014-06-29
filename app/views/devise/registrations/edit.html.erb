@@ -3,23 +3,47 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
+
+  <div><%= f.label :name %><br>
+  <%= f.text_field :name %></div>
+&nbsp;
+  <div class="form-group <% if @incomplete %> has-error <% end %>"><%= f.collection_select(:school_id, School.all, :id, :name, prompt: true) %></div>
+
+  <div><%= f.label :diet %><br>
+  <% Diet.all.order(name: :asc).each do |diet| %>
+  <% if current_student.diets.include?(diet) %>
+  <%= check_box_tag("diets[" + diet.name + "]", value = 1,checked = true)  %>
+  <% else %>
+    <%= check_box_tag("diets[" + diet.name + "]") %>
+      <% end %>
+    <%= label_tag(diet.name.to_sym, diet.name) %><br>
+  <% end %></div>
+
+
+
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
-
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div class="row-fluid">
+<div class="col-sm-6">
+  <div><%= f.label :password %> <i><br>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+</div>
+<div class="col-sm-6">
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div><%= f.label :current_password %> <i><br>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Update" %></div>
+</div>
+</div>
+&nbsp;
+ <%= f.submit "Update", :class => 'btn btn-default' %>
 <% end %>
 
 <h3>Cancel my account</h3>
