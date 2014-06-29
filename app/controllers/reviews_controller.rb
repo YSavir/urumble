@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    @dining_hall = DiningHall.find(params[:dining_hall_id])
   end
 
   def create
