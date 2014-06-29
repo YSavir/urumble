@@ -3,7 +3,7 @@
 <!-- if attached to a review, show the comment and link to full review -->
 <% if @photo.review %>
   <%= @photo.review.comment %>
-  <%= link_to("(Full Review)", review_path(@photo.review))%>
+  <%= link_to("(Full Review)", dining_hall_review_path(@photo.review.dining_hall, @photo.review))%>
 <% end %>
 <!-- link to student -->
 <%= link_to(@photo.student.name, student_path(@photo.student)) %>
