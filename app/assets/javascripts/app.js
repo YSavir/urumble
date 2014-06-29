@@ -7,6 +7,10 @@ $('.add-buttons').hide();
     console.log('click');
     $('.overlay').show();
     $('.add-buttons').show();
+    $('.overlay').on('click', function(){
+      $('.overlay').hide();
+      $('.add-buttons').hide();
+    });
   })
 });
 
