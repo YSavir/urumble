@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'photos#index'
 
   resources :students, :only => [:show]
-  resources :schools, :only [:show]
+  resources :schools, :only => [:show]
   resources :dining_halls do
     resources :reviews, :only => [:show, :new, :create]
   end
