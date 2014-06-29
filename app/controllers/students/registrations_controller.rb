@@ -12,6 +12,7 @@ class Students::RegistrationsController < Devise::RegistrationsController
     end
     current_student.school = School.find(params["school_id"])
     current_student.save!
+    redirect_to '/'
   end
 
 end
